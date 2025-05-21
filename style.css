@@ -1,16 +1,70 @@
+/* Basic body styling */
 body {
-    font-family: sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
     color: #333;
 }
 
-h1 {
-    color: #0056b3;
-    text-align: center;
+/* Header styling */
+header {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#container {
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Page container to enable Flexbox for main and aside */
+.page-container {
+    display: flex;
+    margin: 20px; /* Add some margin around the content */
+    gap: 20px; /* Add space between main and aside */
+}
+
+main {
+    flex: 3; /* Main content takes up 3 parts of the space */
+    background-color: #fff;
+    border: 1px solid #dddfe2;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    flex: 1; /* Aside takes up 1 part of the space */
+    background-color: #fff;
+    border: 1px solid #dddfe2;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic styling for headings in main and aside */
+main h2, aside h2 {
+    color: #3b5998;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
