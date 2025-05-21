@@ -16,8 +16,12 @@ header {
     align-items: center;
 }
 
-header h1 {
+header .text-logo {
     margin: 0;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 header nav ul {
@@ -67,4 +71,131 @@ main h2, aside h2 {
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
     margin-top: 0;
+}
+
+/* Profile page specific styles */
+.profile-picture-placeholder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px; /* Centered with margin below */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* To clip the img to the circular shape */
+    /* background-color, text-align, line-height, border removed */
+}
+
+.profile-avatar {
+    width: 100%; /* Fill the container */
+    height: 100%; /* Fill the container */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    /* border-radius: 50%; /* Not strictly needed if container has overflow:hidden, but good for direct img styling */
+    /* Optional: border and shadow for the image itself */
+    /* border: 3px solid #fff; */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+.profile-details {
+    text-align: center; /* Center text elements within this div */
+}
+
+.profile-details h3 { /* User Name */
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.profile-details p { /* Bio */
+    font-style: italic;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.profile-details h4 { /* Friends heading */
+    font-size: 1.2em;
+    color: #3b5998;
+    margin-bottom: 10px;
+}
+
+.profile-details ul { /* Friends list */
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.profile-details ul li { /* Friend item */
+    background-color: #f9f9f9;
+    padding: 8px 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: inline-block; /* Or use flex for better alignment if needed */
+    margin-right: 8px; /* Spacing between friend items if they become inline */
+}
+
+/* Feed and Post Styling */
+.feed-container {
+    /* No specific styles needed for the container itself yet,
+       but it's here for future use or if specific layout is needed. */
+}
+
+.post {
+    background-color: #fff; /* Overrides main's background for posts if main is not white */
+    border: 1px solid #dddfe2; /* Consistent with other elements */
+    border-radius: 8px; /* Consistent with other elements */
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Softer shadow than main/aside */
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align username and timestamp vertically */
+    margin-bottom: 12px; /* Increased slightly */
+}
+
+.username {
+    font-weight: bold;
+    color: #3b5998; /* Facebook blue-ish color */
+    font-size: 1.05em; /* Slightly larger for emphasis */
+}
+
+.timestamp {
+    font-size: 0.85em; /* Slightly smaller */
+    color: #888; /* Lighter grey */
+}
+
+.post-content {
+    margin-bottom: 15px; /* Increased slightly */
+    line-height: 1.5; /* Improve readability */
+}
+
+.post-content p {
+    margin-top: 0;
+    margin-bottom: 10px; /* Space between paragraphs if any */
+}
+
+.post-content img { /* Basic responsive images within posts */
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; /* Slight rounding for images */
+    margin-top: 5px;
+}
+
+.post-actions {
+    border-top: 1px solid #eee; /* Separator line */
+    padding-top: 10px;
+}
+
+.post-actions span {
+    color: #3b5998;
+    cursor: pointer;
+    margin-right: 15px; /* Increased spacing */
+    font-size: 0.9em;
+    font-weight: bold; /* Make actions a bit more prominent */
+}
+
+.post-actions span:hover {
+    text-decoration: underline;
 }
