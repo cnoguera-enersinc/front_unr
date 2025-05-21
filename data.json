@@ -1,0 +1,7 @@
+{
+  "categories": ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
+  "series": [{
+    "name": "Datos",
+    "data": [1, 3, 2, 4, 5]
+  }]
+}

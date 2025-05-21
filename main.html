@@ -6,32 +6,12 @@
     <title>Mi Gráfico con Highcharts</title>
     <!-- Incluir Highcharts desde un CDN -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Mi Gráfico Interactivo</h1>
     <div id="container" style="width:100%; height:400px;"></div>
 
-    <script>
-        Highcharts.chart('container', {
-            chart: {
-                type: 'line'
-            },
-            title: {
-                text: 'Ejemplo de Gráfico de Linea'
-            },
-            xAxis: {
-                categories: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo']
-            },
-            yAxis: {
-                title: {
-                    text: 'Valor'
-                }
-            },
-            series: [{
-                name: 'Datos',
-                data: [1, 3, 2, 4, 5]
-            }]
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
